@@ -17,7 +17,7 @@ let Router = Backbone.Router.extend({
     ""       : "allDetails",
     // "allDetails" : "showAllDetails",
     "indivDetails/:id" : "showIndividualDetail",
-    "newContact" : "shownewContactTemplate"
+    "newContact" : "showNewContactTemplate"
 
   },
 
@@ -48,6 +48,32 @@ let Router = Backbone.Router.extend({
 
 
     });
+
+      this.$el.on('click', '.newContact', function(event) {
+      let $div = $(event.currentTarget);
+      var newContactId = $div.data('contact-id');
+      router.navigate(`newContact/${detailId}`);
+      router.showNewContactTemplate(detailId);
+
+
+    });
+        //POST request
+        //add Submit Contact Button
+          this.$el.on('click', '.submitContact', function(event) {
+          //from .views/individualDetail
+          let picture = $(this.$el).find(.'Pics');
+          let name = $this.$el).find(.'Name');
+          let email = $this.$el).find(.'Email');
+          let phone = $this.$el).find(.'Phone');
+          let address = $this.$el).find(.'Address')};
+          
+          // newContact = new ContactModel({
+            //add 5 inputs here to match form boxes
+
+          });
+          //add button to return to main page
+
+
 
   },
     home: function () {

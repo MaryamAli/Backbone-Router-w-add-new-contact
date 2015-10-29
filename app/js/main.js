@@ -275,7 +275,7 @@ function processData(data) {
 }
 
 function contactListTemplate(data) {
-  return '\n    \n    <h2>My Peeps</h2>\n    <div>' + processData(data) + '</div>\n    \n\n\n  ';
+  return '\n    \n    <h2>My Peeps</h2>\n    \n    <button class="newPerson" data-to=""><i class="fa fa-plus-circle"></i></button></span>\n    <div>' + processData(data) + '</div>\n\n\n  ';
 }
 
 exports['default'] = contactListTemplate;
